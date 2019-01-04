@@ -44,8 +44,8 @@ class App extends Component {
     const image = document.getElementById('inputimage');
     const height = Number(image.height);
     const width = Number(image.width);
-    console.log(height, width);
-    console.log(data.outputs[0].data.regions[0].region_info.bounding_box)
+   //console.log(height, width);
+    //console.log(data.outputs[0].data.regions[0].region_info.bounding_box)
 
     return {
       leftCol: clarifaiFace.left_col * width,
