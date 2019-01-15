@@ -16,23 +16,20 @@ const app = new Clarifai.App({
 
 const particlesOptions = {
               
-                particles: {
-                  number: {
-                      value: 75,
-                      density: {
-                        enable: true,
-                        value_area: 800
-                      }
-                  
-                    }
-                }
-             
+    particles: {
+        number: {
+            value: 75,
+            density: {
+                enable: true,
+                value_area: 800
+            }
+              
+          }
+    }
+         
 }
 
-class App extends Component {
-  constructor(){
-    super();
-    this.state = {
+const initialState = {
       input: '',
       imageUrl: '',
       box: {},
@@ -43,9 +40,16 @@ class App extends Component {
         name: '',
         email: '',
         entries: 0,
-        joined: ''
+        joined: '',
       }
     }
+
+
+
+class App extends Component {
+  constructor(){
+    super();
+    this.state = initialState;
   }
 /* used to test connection to the backend server 
 componentDidMount(){
@@ -103,12 +107,13 @@ componentDidMount(){
                   headers: {'Content-Type': 'application/json'},
                   body: JSON.stringify({
                      id: this.state.user.id
-                        })
+                  })
           })
           .then(response => response.json())
           .then(count => {
             this.setState(Object.assign(this.state.user, { entries: count}))
           })
+          .catch(console.log)
         }
         this.displayFaceBox(this.calculateFaceLocation(response))
     })
@@ -118,7 +123,7 @@ componentDidMount(){
 
   onRouteChange = (route) => {
     if(route === 'signout'){
-      this.setState({isSignedIn: false})
+      this.setState(initialState)
     } else if (route === 'home') {
       this.setState({isSignedIn: true})
     }
