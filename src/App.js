@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
-
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Navigation from './components/Navigation/Navigation';
 import Signin from './components/Signin/Signin';
@@ -49,12 +48,7 @@ class App extends Component {
     super();
     this.state = initialState;
   }
-/* used to test connection to the backend server 
-componentDidMount(){
-  fetch('http://localhost:3001/')
-  .then(response => response.json())
-  .then(console.log)
-} */
+
 
   loadUser = (data) => {
     this.setState({user: {
