@@ -1,3 +1,13 @@
+This app detects a face in an image that you supply by URL. It keeps track of the number of times you submit an image and provides this to you.
+
+The app is secured by userid and password, and requires a quick registration process. Although the password are kept in a secure format unreadable to me or others, I recommend using a simple password just for this app.
+
+The app is built using React.js, Express, and postgreSQL and is hosted on Heroku. 
+
+Thanks for giving it a try!
+
+-Ken
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
