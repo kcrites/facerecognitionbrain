@@ -1,8 +1,11 @@
-This app detects a face in an image that you supply by URL. It keeps track of the number of times you submit an image and provides this to you.
+This app detects a face in an image that you supply by URL. It keeps track of the number of times you submit an image and provides this to you in the UI.
 
-The app is secured by userid and password, and requires a quick registration process. Although the password are kept in a secure format unreadable to me or others, I recommend using a simple password just for this app.
+The app is secured by userid and password, and requires a quick registration process. Although the passwords are kept in a secure format unreadable to me or others, I recommend using a simple password just for this app.
 
-The app is built using React.js, Express, and postgreSQL and is hosted on Heroku. 
+The app is built using React.js, Express, postgreSQL and is hosted on Heroku. 
+It utilizes the Clarifai API to perform facial recognition and then the app provides the outline.
+
+The URL for the app is: https://smart-brain-kc.herokuapp.com/
 
 Thanks for giving it a try!
 
